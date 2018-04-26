@@ -1,0 +1,11 @@
+[12-Jan-2018 17:38:20 UTC] PHP Fatal error:  Function name must be a string in /home/roarlionzera16/public_html/final/lion/php/logout.php on line 2
+[12-Jan-2018 17:40:01 UTC] PHP Fatal error:  Function name must be a string in /home/roarlionzera16/public_html/final/lion/php/logout.php on line 5
+[12-Jan-2018 20:37:46 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:38:39 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:39:55 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:45:47 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:53:59 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:54:02 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:54:10 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:54:30 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1
+[12-Jan-2018 20:54:31 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/roarlionzera16/public_html/final/lion/php/login.php on line 1

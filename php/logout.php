@@ -1,0 +1,1 @@
+<?phpif(unset($_SESSION['username'])){	header("Location:../index.php");}else{		echo 'hello';	}?>

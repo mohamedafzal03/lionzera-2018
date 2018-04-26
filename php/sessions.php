@@ -1,0 +1,1 @@
+<?php	include('db.php');	$username=$_SESSION['username'];	//echo $username;	$user_details=mysqli_query($connection,"select * from user where user_email='$username'");	$user_details_value=mysqli_fetch_assoc($user_details);	$user=$user_details_value['user_name'];			echo $user;?>
