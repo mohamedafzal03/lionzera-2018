@@ -1,0 +1,417 @@
+
+
+
+/*******************************
+* MD DIALOG - MATERIAL DESIGN
+* Add "modal-sm" after "modal-dialog" class for smaller dialog.
+* Get free snippets on bootpen.com
+*******************************/
+/* ----- IMPORT ROBOTO FONT FOR MD ----- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+
+/* ----- DIALOG/MODAL ----- */
+/* FADE/SCALE EFFECT */
+	.modal.fade .modal-dialog {
+		opacity: 0;
+		-webkit-transform: scale(0.1);
+			-ms-transform: scale(0.1);
+			 -o-transform: scale(0.1);
+				transform: scale(0.1);
+		-webkit-transition: all 0.3s ease;
+		   -moz-transition: all 0.3s ease;
+			 -o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+	}
+
+	.modal.fade.in .modal-dialog {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			 -o-transform: scale(1);
+				transform: scale(1);
+		-webkit-transform: translate3d(0%, 0, 0);
+			-ms-transform: translate3d(0%, 0, 0);
+			 -o-transform: translate3d(0%, 0, 0);
+				transform: translate3d(0%, 0, 0);
+	}
+
+/* DIALOG CONTENT */
+	.modal-content {
+		border: none;
+		border-radius: 2px;
+		-webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+		   -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+	}
+
+/* DIALOG HEADER */
+	.modal-header {
+		min-height: 16px;
+		padding: 24px;
+		border-bottom: none;
+	}
+
+	.modal-title {
+		font-weight: 500;
+		font-size: 21px;
+	}
+
+	/* DIALOG BODY */
+	.modal-body {
+		padding: 0 24px;
+	}
+
+	.modal-body p {
+		font-weight: 400;
+		font-size: 14px;
+		color: #212121;
+	}
+
+	.modal-body .lead {
+		font-weight: 300;
+		font-size: 16px;
+		color: #757575;
+	}
+
+	.modal-body p:last-child,
+	.modal-body .lead:last-child {
+		margin-bottom: 0;
+	}
+
+/* DIALOG FOOTER */
+	.modal-footer {
+		margin-top: 24px;
+		padding: 8px 0;
+		border-top: none;
+	}
+
+	.modal-footer .btn {
+		height: 36px;
+		margin-right: 8px;
+		padding: 8px 10px;
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #009688;
+		background-color: #fff;
+	}
+
+	.modal-footer .btn:focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	.modal-footer .btn:focus,
+	.modal-footer .btn:hover {
+		color: #00796B;
+	}
+
+	.modal-footer .btn + .btn {
+		margin-left: 0;
+	}
+
+	.modal-footer .btn + .btn:last-child {
+		margin-left: -4px;
+	}
+
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+.btn-demo {
+	margin: 15px;
+	padding: 10px 15px;
+	border-radius: 0;
+	background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+	outline: none;
+}
+
+.demo-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #212121;
+	text-align: center;
+}
+
+.demo-footer > a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
+/*Hover Code*/
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover
+ { 
+    color:white;
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: url() center no-repeat #000000 ;
+}
+
+.se-pre-con2 {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: rgba(0,0,0,.075);
+}
+  
+@font-face {
+    font-family: myFirstFont;
+    src: url(font/origram.otf);
+}
+
+.futurafont {
+    font-family: myFirstFont;
+}
+/*ignite font*/
+@font-face {
+    font-family: myFirstFontt;
+    src: url(font/monitorica.bold.ttf);
+}
+
+.ignitefont {
+    font-family: myFirstFontt;
+}
+
+
+.quick-link{
+	top:40%;
+}
+
+
+.content {
+    margin: 0px 10%;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color:#051a21;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+/*  background:#3498db;*/
+}
+
+.cs-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.cs-loader-inner label {
+  font-size: 20px;
+  opacity: 0;
+  display:inline-block;
+}
+
+@keyframes lol {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+
+@-webkit-keyframes lol {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
+}
+
+.cs-loader-inner label:nth-child(6) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(5) {
+  -webkit-animation: lol 3s 100ms infinite ease-in-out;
+  animation: lol 3s 100ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(4) {
+  -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  animation: lol 3s 200ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(3) {
+  -webkit-animation: lol 3s 300ms infinite ease-in-out;
+  animation: lol 3s 300ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(2) {
+  -webkit-animation: lol 3s 400ms infinite ease-in-out;
+  animation: lol 3s 400ms infinite ease-in-out;
+}
+
+.cs-loader-inner label:nth-child(1) {
+  -webkit-animation: lol 3s 500ms infinite ease-in-out;
+  animation: lol 3s 500ms infinite ease-in-out;
+}
+
+
+.deskContent {
+     width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.phoneContent {
+     width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media all and (max-width: 959px) {
+    .deskContent {display:block;}
+    .phoneContent {display:none;}
+}
+
+@media all and (max-width: 479px) {
+    .deskContent {display:none;}
+    .phoneContent {display:block;}
+}
+
+
+pp {
+  text-align: center;
+  margin-top: 5%;
+  font-family: Century Gothic;
+  color: #333;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #291f4d;
+}
+
+a {
+  color:#291f4d;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: white;
+  text-shadow:0px 1px 12px #666;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;}
+  
+  
+  
+
+  
+#toast-btn {
+  display: inline-block;
+  float: left;
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #3B2F63;
+  white-space: no-wrap;
+  font-size: 20px;
+  color: #3B2F63;
+  width: 40%;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#toast-btn:hover {
+  background: #3B2F63;
+  color: #fff;
+}
+
+#textbox {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 0 10px;
+  color: #fff;
+  border-left: 2px solid #fff;
+  width: 60%;
+}
+
+.toast {
+  padding: 15px 20px;
+  color: #fff;
+  background: rgba(0,0,10,0.7);
+  display: inline-block;
+  position: fixed;
+  top: -100px;
+  right: 15px;
+  z-index:9999999;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+  
+

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Logo</title>
+    <meta name="description" content="">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="build.js"></script>
+<style>
+
+/*******************************
+* MD DIALOG - MATERIAL DESIGN
+* Add "modal-sm" after "modal-dialog" class for smaller dialog.
+* Get free snippets on bootpen.com
+*******************************/
+/* ----- IMPORT ROBOTO FONT FOR MD ----- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+
+/* ----- DIALOG/MODAL ----- */
+/* FADE/SCALE EFFECT */
+	.modal.fade .modal-dialog {
+		opacity: 0;
+		-webkit-transform: scale(0.1);
+			-ms-transform: scale(0.1);
+			 -o-transform: scale(0.1);
+				transform: scale(0.1);
+		-webkit-transition: all 0.3s ease;
+		   -moz-transition: all 0.3s ease;
+			 -o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+	}
+
+	.modal.fade.in .modal-dialog {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			 -o-transform: scale(1);
+				transform: scale(1);
+		-webkit-transform: translate3d(0%, 0, 0);
+			-ms-transform: translate3d(0%, 0, 0);
+			 -o-transform: translate3d(0%, 0, 0);
+				transform: translate3d(0%, 0, 0);
+	}
+
+/* DIALOG CONTENT */
+	.modal-content {
+		border: none;
+		border-radius: 2px;
+		-webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+		   -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+	}
+
+/* DIALOG HEADER */
+	.modal-header {
+		min-height: 16px;
+		padding: 24px;
+		border-bottom: none;
+	}
+
+	.modal-title {
+		font-weight: 500;
+		font-size: 21px;
+	}
+
+	/* DIALOG BODY */
+	.modal-body {
+		padding: 0 24px;
+	}
+
+	.modal-body p {
+		font-weight: 400;
+		font-size: 14px;
+		color: #212121;
+	}
+
+	.modal-body .lead {
+		font-weight: 300;
+		font-size: 16px;
+		color: #757575;
+	}
+
+	.modal-body p:last-child,
+	.modal-body .lead:last-child {
+		margin-bottom: 0;
+	}
+
+/* DIALOG FOOTER */
+	.modal-footer {
+		margin-top: 24px;
+		padding: 8px 0;
+		border-top: none;
+	}
+
+	.modal-footer .btn {
+		height: 36px;
+		margin-right: 8px;
+		padding: 8px 10px;
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #009688;
+		background-color: #fff;
+	}
+
+	.modal-footer .btn:focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	.modal-footer .btn:focus,
+	.modal-footer .btn:hover {
+		color: #00796B;
+	}
+
+	.modal-footer .btn + .btn {
+		margin-left: 0;
+	}
+
+	.modal-footer .btn + .btn:last-child {
+		margin-left: -4px;
+	}
+
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+.btn-demo {
+	margin: 15px;
+	padding: 10px 15px;
+	border-radius: 0;
+	font-size: 16px;
+	background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+	outline: none;
+}
+
+.demo-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #212121;
+	text-align: center;
+}
+
+.demo-footer > a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
+/*Hover Code*/
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover
+ { 
+    color:white;
+}
+
+
+</style>
+
+  </head>
+  <body>
+  
+<!-- Static top navbar -->
+<div class="navbar navbar-default navbar-fixed-top" style="background:rgba(0,0,0,0.65);">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".top-collapse"><!-- NOTE!  data-toggle was changed to top-collapse -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Futura  </a>
+      <a class="navbar-brand" >|  </a>
+    </div>
+    <div class="navbar-collapse collapse top-collapse"><!-- NOTE!  the class top-collapse was added here -->
+      <ul class="nav navbar-nav">
+        <li><a href="#contact">Events</a></li>
+        <li><a href="#contact">Project Design Contest</a></li>
+        <li><a href="#contact">Proshows</a></li>
+        <li><a href="#contact">Sponsors</a></li>
+        <li><a href="#contact">Contact</a></li>
+   
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="">Register</a></li>
+     <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+          <ul class="dropdown-menu" style="">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Logout</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>      
+		        <li class=""><a href="">VR Version</a></li>
+
+		</ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<!-- END OF site header Menu-->
+    <a-scene vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="tree" src="assets/models/tree1/tree1.dae"></a-asset-item>
+		
+		
+		
+
+	<a-asset-item id="flogo-obj" src="obj/f/f.obj"></a-asset-item>
+	<a-asset-item id="flogo-mtl" src="obj/f/f.mtl"></a-asset-item>
+
+
+	<a-asset-item id="futura-obj" src="obj/futura/futura.obj"></a-asset-item>
+	<a-asset-item id="futura-mtl" src="obj/futura/futura.mtl"></a-asset-item>
+
+
+      </a-assets>
+
+      <!-- Quasi-isometric camera -->
+      <a-entity>
+	  
+        <a-animation attribute="position" from="0 5 0" to="0 0 0" dur="4000"
+                     easing="ease-out"></a-animation>
+        <a-entity position="0 880 1290" rotation="-34 0 0">
+          <a-camera id="camera" near="1000" far="4000" fov="2.2" user-height="0"
+                    wasd-controls-enabled="false" look-controls-enabled="false"></a-camera>
+        </a-entity>  
+      </a-entity>
+
+      <a-entity id="logo" rotation="0 45 0" >
+	
+	  
+<!--
+	 <a-entity
+        position="0 2 -0" 
+        geometry="primitive: plane; width: 80"
+        material="color: #333333"
+        text="color: white; anchor: center; font: sourcecodepro;
+              value: anchor='center' (default align) SourceCodePro 123456789012345678901234567890123456789012345678901234567890"
+      ></a-entity>
+		-->
+
+        <!-- Clouds -->
+        <a-entity>
+          <!-- Large, foreground -->
+          <a-box color="white" opacity="0.25" width="18" depth="28" height="6">
+            <a-animation attribute="position" from="-280 240 180" to="-280 240 340" delay="0"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+
+          <a-box color="pink" opacity="0.65" width="8" depth="12" height="4">
+            <a-animation attribute="position" from="5 32 -80" to="5 32 120" delay="12000"
+                         dur="48000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+
+          <!-- Behind the A -->
+          <a-box color="white" opacity="0.75" width="6" depth="9" height="4" visible="false">
+            <a-animation attribute="position" from="-6 17 -10" to="-6 17 100" delay="1000"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+            <a-animation attribute="visible" to="true" delay="1000" dur="1"></a-animation>
+          </a-box>
+
+		  <!-- Behind the A -->
+          <!--<a-box color="green" opacity="0.75" width="6" depth="9" height="4" visible="false">
+            <a-animation attribute="position" from="10 12 -10" to="10 12 100" delay="1000"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+            <a-animation attribute="visible" to="true" delay="1000" dur="1"></a-animation>
+          </a-box>-->
+		  
+		  
+		  
+		<!--   <a-entity
+        text-geometry="value:100+ Events"
+        material="color:black"
+		rotation="0 -90 0"
+		scale="3 3 3">
+	    <a-animation attribute="position" from="10 15 -10" to="10 15 100" delay="1000"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+						             <a-animation attribute="visible" to="true" delay="1000" dur="1"></a-animation>
+ </a-entity>  
+-->
+
+	  
+	  
+	  
+	  
+	  <a-entity
+        text-geometry="value:2 Million worth Prizes	"
+        material="color:#ef2d5e"
+		rotation="0 -90 0"
+		scale="3 3 3" >
+	    <a-animation attribute="position" from="10 15 -100" to="10 15 100" delay="1000"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+						             <a-animation attribute="visible" to="true" delay="1000" dur="1"></a-animation>
+	  </a-entity>
+	  
+	  
+
+          <a-box color="grey" opacity="0.5" width="8" depth="12" height="3">
+            <a-animation attribute="position" from="20 16 -80" to="20 16 120" delay="200"
+                         dur="52000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+
+          
+		  
+		  <a-box color="violet" opacity="0.8" width="8" depth="24" height="3">
+		    <a-entity
+        text-geometry="value:100+ Events & Workshops"
+        material="color:#ef2d5e"
+		rotation="0 -90 0"
+		position="0 2 -13"	
+		scale="3 3 3" >
+		</a-entity>
+            <a-animation attribute="position" from="-20 18 -70" to="-20 18 120" delay="200"
+                         dur="50000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+		  
+		  <a-box color="white" opacity="0.8" width="9" depth="37" height="3">
+		    <a-entity
+        text-geometry="value:India's largest Technocultural fest"
+        material="color:#ef2d5e"
+		rotation="0 -90 0"
+		position="0 2 -14"	
+		scale="3 3 3" >
+		</a-entity>
+            <a-animation attribute="position" from="-30 18 -20" to="-30 18 120" delay="200"
+                         dur="50000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+		  
+		 <a-box color="white" opacity="0.8" width="9" depth="14" height="3">
+		    <a-entity
+        text-geometry="value:Title Trophy"
+        material="color:#ef2d5e"
+		rotation="0 -90 0"
+		position="0 2 -5"	
+		scale="3 3 3" >
+		</a-entity>
+            <a-animation attribute="position" from="10 18 -10" to="10 18 120" delay="200"
+                         dur="50000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+          </a-box>
+		
+
+		  
+		  
+		  
+		  
+          <a-box color="" opacity="0.75" width="5" depth="7" height="3">
+		    <a-entity
+        text-geometry="value:100+ Events"
+        material="color:#ef2d5e"
+		rotation="0 -90 0"
+		position="0 2 -0"	
+		scale="3 3 3" >
+		</a-entity>
+            <a-animation attribute="position" from="26 20 -80" to="26 20 120" delay="20000"
+                         dur="48000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>			
+          </a-box> 
+		  
+		  
+		  
+		  <a-box color="pink" opacity="0.75" width="5" depth="7" height="3">
+            <a-animation attribute="position" from="10 20 -70" to="26 20 120" delay="20000"
+                         dur="36000" easing="linear" repeat="indefinite"
+                         fill="both"></a-animation>
+						 
+          </a-box>
+		  
+		  
+        </a-entity>
+
+        <!-- Shadow --
+        <a-entity rotation="-90 0 0">
+          <a-plane width="12.5" height="20" position="0 0 0.1" pivot="0 -10 0"
+                   color="grey">
+            <a-animation attribute="scale" from="1 0 1" to="1 1 1" easing="ease-out"
+                         delay="600" dur="1000" fill="both"></a-animation>
+          </a-plane>
+        </a-entity>-->
+
+        <!-- Base -->
+        <a-entity>
+          <a-plane width="38" height="38" color="#ef2d5e" rotation="-90 0 0" position="">
+            <a-animation attribute="position" from="0 -40 0" to="0 0 0" dur="1600"
+                         easing="ease-out"></a-animation>
+          </a-plane>
+		  
+        </a-entity>
+
+		
+		<a-obj-model src="#flogo-obj" mtl="#flogo-mtl" geometry="primitive: box; roughness: 1;" 
+position="0 0 -15"
+ rotation="0 -90 0 " 
+scale="0 0 0" 
+visible=""  
+obj-model="obj:#flogo-obj;mtl:#flogo-mtl">
+ <a-animation attribute="scale" to="0.2 0.2 0.2" delay="200" dur="1000"
+                       easing="ease-out">
+					   
+					   </a-animation>
+</a-obj-model>
+
+
+		<a-obj-model src="#futura-obj" mtl="#futura-mtl" geometry="primitive: box; roughness: 1;" 
+position="-21 0 0"
+ rotation="0 270 360 " 
+scale="0 150 0" 
+visible=""  
+obj-model="obj:#futura-obj;mtl:#futura-mtl">
+ <a-animation attribute="scale" to="0.3 0.3 0.3 " delay="200" dur="1000"
+                       easing="ease-out">
+					   
+					   </a-animation>
+</a-obj-model>
+
+			   
+			    <a-entity
+        text-geometry="value: Perciption Cognition Interaction"
+        material="color: #66E1B4"
+        position="-20 2 16"
+		scale=""
+      >
+	   <a-animation attribute="scale" to="3.7 3.7 3.7 " delay="200" dur="1000"
+                       easing="ease-out">
+					   </a-entity>
+
+	 
+			   
+        <!-- Trees --
+        <a-entity position="-10 0.2 -10">
+          <a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false">
+            <a-animation attribute="position" from="0 10 0" to="0 0 0" delay="650" dur="800"
+                         easing="ease-out" fill="backwards"></a-animation>
+            <a-animation attribute="visible" to="true" delay="800" dur="1"></a-animation>
+          </a-collada-model>
+        </a-entity>
+
+        <a-entity position="-10 0.2 6">
+          <a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false">
+            <a-animation attribute="position" from="0 10 0" to="0 0 0" delay="400" dur="800"
+                         easing="ease-out" fill="backwards"></a-animation>
+            <a-animation attribute="visible" to="true" delay="400" dur="1"></a-animation>
+          </a-collada-model>
+        </a-entity>
+
+        <a-entity position="10 0.2 10">
+          <a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false">
+            <a-animation attribute="position" from="0 10 0" to="0 0 0" delay="600" dur="800"
+                         easing="ease-out" fill="backwards"></a-animation>
+            <a-animation attribute="visible" to="true" delay="600" dur="1"></a-animation>
+          </a-collada-model>
+        </a-entity>
+      </a-entity>-->
+
+      <a-sky color="#40b3e9" radius="1000"></a-sky>
+      <a-light type="directional" color="#FFF" intensity="0.95" position="4 2 1"></a-light>
+      <a-light type="ambient" color="#A8A8A8"></a-light>
+
+    </a-scene>
+	
+
+<!-- Static bottom navbar -->
+<div class="navbar navbar-default navbar-fixed-bottom" style="background:rgba(0,0,0,0.65);">
+  <div class="container" >
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bottom-collapse"> <!-- NOTE! data-target was changed to .bottom-collapse -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  
+      <a class="navbar-brand" class="btn btn-demo" data-toggle="modal" data-target="#myModal-2">Lite Version</a>
+    </div>
+    <div class="navbar-collapse collapse bottom-collapse"> <!-- NOTE! The extra bottom-collapse class put on here -->
+      <ul class="nav navbar-nav">
+        <li class=""><a href="#">More</a></li>
+        <li><a href="#about">Bottom</a></li>
+        <li><a href="#contact">Menus</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="navbar/">schedule</a></li>
+        <li><a href="navbar-fixed-top/">Blogs</a></li>
+        <li><a data-toggle="modal" data-target="#pmys">Futura DP Generator</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div><!--/.nav-collapse -->
+    </div><!--/.nav-collapse -->
+	
+	
+	
+	<div class="modal fade left" id="pmys" tabindex="-1" role="dialog" aria-labelledby="pmys" style="">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content" style="">
+				<div class="modal-header">
+					<h4 id="myModalLabel-2" style="color:black;">dp_modal<h4>
+				</div>
+
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ligula id sem tristique ultrices eget id neque. Duis enim turpis, tempus at accumsan vitae, lobortis id sapien. Pellentesque nec orci mi, in pharetra ligula. Nulla facilisi. Nulla facilisi. Mauris convallis venenatis massa, quis consectetur felis ornare quis. Sed aliquet nunc ac ante molestie ultricies. Nam pulvinar ultricies bibendum.</p>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dialog" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-dialog">Ok</button>
+				</div>
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div><!-- modal -->
+	
+	
+  </body>
+</html>

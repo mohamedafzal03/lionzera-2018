@@ -1,0 +1,241 @@
+@font-face{
+    font-family: 'ca';
+    src:url('CaviarDreams.ttf');
+  }
+  @font-face{
+      font-family: 'mo';
+      src:url('Roboto-Medium.ttf');}
+body{
+    font-family: mo;
+    background-image: url(..\resources\landing\bg.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+  .ui{
+    visibility: hidden;
+    position: fixed;
+    z-index: -9999;
+    top: 3%;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box-flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box-flex;         /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox-flex;      /* TWEENER - IE 10 */
+      display: -webkit-flex;     /* NEW - Chrome */
+     display: flex;
+    -webkit-box-flex-direction:column;-moz-box-flex-direction:column;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column;
+    -webkit-box-align-items:center;-moz-box-align-items:center;-ms-align-items:center;-webkit-align-items:center;align-items:center;
+
+}
+.visible{
+  visibility: visible;
+}
+.hidden{
+  visibility: hidden;
+}
+#b {
+   animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+}
+#a {
+animation-delay: .1s;
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+}
+#d {
+  position: absolute;
+  left: 0.5%;
+  top: -5%;
+animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+}
+#e {
+animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+  -moz-animation-delay: 2.8s;
+}
+.demo{
+
+width:600px;
+position: relative;
+top: 350px;
+margin:0 auto;
+color: #ffefdf;
+text-align: center;
+font-size: 50px;
+font-family: mo;
+
+}
+
+.demo{
+  color:#F4F4F4;
+  animation-name: glow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+
+}
+
+@-webkit-keyframes glow {
+   0% { color: #adff9c; }
+  20% { color: #f1433f; }
+  40% { color: #f7e967; }
+  60% { color: #a9cf54; }
+  80% { color: #b8e6c6; }
+  100% { color: #ff2c27; }
+}
+@keyframes glow {
+  0% { color: #adff9c; }
+  20% { color: #f1433f; }
+  40% { color: #f7e967; }
+  60% { color: #a9cf54; }
+  80% { color: #b8e6c6; }
+  100% { color: #ff2c27; }
+}
+.b-hover{
+position: absolute;
+bottom: 60px;
+left: 48%;
+color: white;
+text-decoration: none;
+
+}
+#footer{
+  position: absolute;
+  bottom: 0.5%;
+  width: 100%;
+  margin: 0 auto;
+  transition: all 2s;
+  display: flex;
+  justify-content: center;
+}
+#footer_list{
+  border-top: 1px solid #2d2d2d;
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+}
+#footer_list li{
+  padding-right: 2%;
+  font-size:12px;
+  float: left;
+}
+#footer_list li a{
+  color: black;
+  font-style: none;
+  text-decoration: none;
+}
+#footer_list li a:visited{
+  color: black;
+  font-style: none;
+  text-decoration: none;
+}
+.list{
+  display: flex;
+  justify-content: center;
+
+  border-top: 10px;
+  border-bottom: 10px;
+  border-color: white;
+}
+#events_list{
+  font-family: ca;
+  font-size: 110%;
+  position: absolute;
+  text-align: center;
+  bottom:30%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  left: -4%;
+
+}
+#events_list li{
+  padding-top: 10%;
+  padding-left: 3%;
+    float: left;
+}
+#events_list a{
+  text-decoration: none;
+  color: #ffefdf;
+}
+#events_list li a:visited{  //new
+  font-family: ca;
+  font-style: none;
+  color: #ffefdf;
+  text-decoration: none;
+  font-size: 110%;
+  position: absolute;
+  text-align: center;
+  bottom:20%;
+  list-style: none;
+  padding-top: 10%;
+}
+#events_list li a:hover{
+ color: #85fcec;
+}
+.social{
+  display: flex;
+  list-style: none;
+  float: left;
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  justify-content: center;
+}
+.social li{
+  transform: scale(0.75);
+  padding-left: 3%;
+}
+.xx{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.xx img{
+  margin: 0 2px;
+}
+.signin {
+  border-radius: 10%;
+  background: #f4f4f4;
+  z-index: 9999;
+  position: absolute;
+  font-family: mo;
+  font-style: none;
+  color: #2d2d2d;
+  padding: 0.5%;
+  top: 3%;
+  right: 2%;
+  text-decoration: none;
+}
+.signin a{
+  text-decoration: none;
+  color: #2d2d2d;
+}
+.signin a:visited{
+  background: #f4f4f4;
+  z-index: 9999;
+  position: absolute;
+  font-family: mo;
+  font-style: none;
+  color: #2d2d2d;
+  padding: 0.5%;
+  top: 3%;
+  right: 2%;
+  text-decoration: none;
+}
+#profile{
+  position: absolute;
+  right: 8%;
+}
